@@ -2,6 +2,8 @@
 import React from 'react';
 import './App.css';
 import Body from './components/Body'
+import ListOfBooks from './components/ListOfBooks'
+
 
 function App() {
 
@@ -9,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Body />
+      <ListOfBooks />
     </div>
 
 

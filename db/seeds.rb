@@ -6,3 +6,37 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts"seeding......."
+
+5.times {Admin.create(
+  { name: Faker::Name.first_name,
+    age: rand(20..50),
+    phone_number:Faker::PhoneNumber.cell_phone }
+  )}
+
+
+  75.times {
+    Reader.create(
+    {name: Faker::Name.first_name,
+      age: rand(10..75),
+      phone_number:Faker::PhoneNumber.cell_phone_in_e164,
+      hometown: Faker::Nation.capital_city}
+    )}
+
+
+    30.times {Book.create({title: Faker::Book.title,author: Faker::Book.author,publisher:Faker::Book.publisher,year_published:rand(1895..2002)})}
+
+    100.times do
+      book = Book.order('RANDOM()').first
+      admin = Admin.order('RANDOM()').first
+      reader = Reader.order('RANDOM()').first
+
+    1.times {AuthorBook.create(
+        book_id: book.id,
+        admin_id: admin.id,
+        reader_id: reader.id
+      )
+    }
+    end
+
+puts "seeded"

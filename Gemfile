@@ -69,4 +69,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+
+gem "faker", "~> 3.2"
+
+# gem "pg", "~> 1.5"

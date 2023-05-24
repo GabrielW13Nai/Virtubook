@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+// import { FormType, Label, Input, Button } from '../styles'
 
-export default function Body(){
-    const [name, setName] = ('');
-    const [author, setAuthor] = ('');
-    const [yearPublished, setYearPublished] = ('');
+
+function Body(){
+    const [name, setName] = useState('');
+    const [author, setAuthor] = useState('');
+    const [publisher, setPublisher] = useState('');
+    const [yearPublished, setYearPublished] = useState('');
 
 
     const bookObject =  {
         name,
         author,
+        publisher,
         yearPublished
     }
 
@@ -22,18 +26,38 @@ export default function Body(){
     }
 
 
-    return(
+    return (
         <>
             <form>
-                <label>Book Name</label>
-                <input type="text" value={name}onChange={e => setName(e.target.value)}>Name</input><br></br>
-                <label>Author</label>
-                <input type="text" value={author}onChange={e=> setAuthor(e.target.value)}>Name</input><br></br>
-                <label>Year published</label>
-                <input type="text" value={yearPublished}onChange={e=> setYearPublished(e.target.value)}>Name</input><br></br>
+                {/* <FormType> */}
+                    <label>Book Name</label>
+                    <input
+                    type="text"
+                    value={name}
+                    onChange={e => setName(e.target.value)}/><br></br>
 
-                <button type="submit" onSubmit={handleSubmit}>Submit</button>
+                    <label>Author</label>
+                    <input
+                    type="text"
+                    value={author}
+                    onChange={e => setAuthor(e.target.value)}/><br></br>
+
+                    <label>Publisher</label>
+                    <input type="text"
+                    value={publisher}
+                    onChange={e => setPublisher(e.target.value)}/><br></br>
+
+                    <label>Year published</label>
+                    <input type="text"
+                    value={yearPublished}
+                    onChange={e => setYearPublished(e.target.value)}/><br></br>
+
+                    <button type="submit" onSubmit={handleSubmit}>Submit</button>
+                {/* </FormType> */}
+
             </form>
         </>
     )
 }
+
+export default Body
