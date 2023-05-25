@@ -10,28 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_22_194618) do
-  create_table "admins", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.integer "phone_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "author_books", force: :cascade do |t|
-    t.integer "book_id"
-    t.integer "reader_id"
-    t.integer "admin_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_05_25_162549) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.string "publisher"
     t.integer "year_published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reader_books", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "reader_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

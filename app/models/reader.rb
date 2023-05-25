@@ -1,5 +1,4 @@
 class Reader < ApplicationRecord
-  has_many :books
-  has_many :admins, through: :books
-  has_many :author_books
+  has_many :reader_books
+  has_many :books, through: :reader_books
 end

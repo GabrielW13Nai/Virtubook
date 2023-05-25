@@ -2,8 +2,8 @@ import React, { useState } from "react";
 // import { FormType, Label, Input, Button } from '../styles'
 
 
-function Body( {onAdd}){
-    const [name, setName] = useState('');
+function Body(){
+    const [title, setName] = useState('');
     const [author, setAuthor] = useState('');
     const [publisher, setPublisher] = useState('');
     const [yearPublished, setYearPublished] = useState('');
@@ -12,21 +12,20 @@ function Body( {onAdd}){
 
 
     const bookObject =  {
-        name,
+        title,
         author,
         publisher,
         yearPublished
     }
 
-    function handleSubmit(e){
-        e.preventDefault();
+    function handleSubmit(){
         fetch('/books',{
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(bookObject)
         })
         .then((r) => r.json())
-        .then(book=> onAdd(book))
+        .then(book=> console.log(book))
     }
 
 
@@ -34,10 +33,10 @@ function Body( {onAdd}){
         <>
             <form onSubmit={handleSubmit}>
                 {/* <FormType>*/}
-                    <label>Book Name</label>
+                    <label>Book Title</label>
                     <input
                     type="text"
-                    value={bookObject.name}
+                    value={bookObject.title}
                     onChange={e => setName(e.target.value)}/><br></br>
 
                     <label>Author</label>

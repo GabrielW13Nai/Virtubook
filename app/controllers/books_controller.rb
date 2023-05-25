@@ -6,7 +6,6 @@ class BooksController < ApplicationController
 
   def create
     book = Book.create(book_params)
-    byebug
     render json: book, status: :created
   end
 

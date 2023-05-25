@@ -1,6 +1,4 @@
 class Book < ApplicationRecord
-  belongs_to :reader
-  belongs_to :admin
-
-  has_many :author_books
+  has_many :reader_book
+  has_many :readers, through: :reader_book
 end
