@@ -5,12 +5,12 @@ import Body from './components/Body'
 import ListOfBooks from './components/ListOfBooks'
 
 
-function App() {
+function App({onAdd}) {
 
 
   return (
     <div className="App">
-      <Body />
+      <Body onAdd= {onAdd} />
       <ListOfBooks />
     </div>
 
