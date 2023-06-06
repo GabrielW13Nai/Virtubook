@@ -24,7 +24,7 @@ puts"seeding......."
     )}
 
 
-    60.times {Book.create({title: Faker::Book.title,author: Faker::Book.author,publisher:Faker::Book.publisher,year_published:rand(1895..2002)})}
+    60.times {Book.create({title: Faker::Book.title,author: Faker::Book.author,publisher:Faker::Book.publisher,year_published:rand(1895..2002)}, category:['Action', 'Science-Fiction', 'Fantasy', 'Animation', 'Drama'].sample)}
 
     100.times do
       book = Book.order('RANDOM()').first

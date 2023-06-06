@@ -1,7 +1,12 @@
 import React from "react";
+import BookAdd from "./BookAdd";
 
-function header(){
-
+function Header(){
+return(
+    <BookAdd />
+)
 
 
 }
+
+export default Header

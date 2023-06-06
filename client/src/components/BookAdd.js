@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-// import { FormType, Label, Input, Button } from '../styles'
+// import styled from "styled-components";
+import FormType from "../styles/FormType";
 
 
-function Body(){
+
+function BookAdd(){
     const [title, setName] = useState('');
     const [author, setAuthor] = useState('');
     const [publisher, setPublisher] = useState('');
@@ -31,8 +33,7 @@ function Body(){
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                {/* <FormType>*/}
+                <FormType onSubmit={handleSubmit}>
                     <label>Book Title</label>
                     <input
                     type="text"
@@ -56,11 +57,9 @@ function Body(){
                     onChange={e => setYearPublished(e.target.value)}/><br></br>
 
                     <button type="submit" >Submit</button>
-                {/* </FormType> */}
-
-            </form>
+                </FormType>
         </>
     )
 }
 
-export default Body
+export default BookAdd
