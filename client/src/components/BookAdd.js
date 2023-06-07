@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import styled from "styled-components";
-import FormType from "../styles/FormType";
+// import FormType from "../styles/FormType";
 
 
 
@@ -33,7 +33,7 @@ function BookAdd(){
 
     return (
         <>
-                <FormType onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <label>Book Title</label>
                     <input
                     type="text"
@@ -57,7 +57,7 @@ function BookAdd(){
                     onChange={e => setYearPublished(e.target.value)}/><br></br>
 
                     <button type="submit" >Submit</button>
-                </FormType>
+                </form>
         </>
     )
 }
