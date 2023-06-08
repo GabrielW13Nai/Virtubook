@@ -7,10 +7,17 @@ import '../App.css'
 function Header(){
 return(
     <>
+
+    <Link to='/borrowstatus'><button className= "Btn-book">Borrow book</button></Link>
+    <Link to='/bookdisplay'><button className= "Btn-book">Display current library</button></Link>
+    <Link to='/bookremove'><button className= "Btn-book">Remove book from catalogue</button></Link>
+    <Link to='/borrowstatus'><button className= "Btn-book">View status of borrowed books</button></Link>
+    <Link to='/borrowstatus'><button className= "Btn-book">See borrowed books here &rarr;</button></Link>
     <Link to='/bookadd'>
-        <button className="Add-book">Add book</button>
+        <button className="Btn-book">Add new book to catalogue</button>
         </Link>
-    <Link to='/books'>Show books</Link>
+
+
     {/* <BookAdd />
     <ListOfBooks /> */}
     </>
