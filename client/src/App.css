@@ -52,6 +52,14 @@
 
 }
 
+.bookoptions{
+  border: 1px solid ;
+  border-radius: 5px;
+  padding: 10px;
+  display:block;
+  margin-right: 46.5em;
+}
+
 .Btn-book:hover{
   background-color:rgba(61, 6, 164, 0.936);
 }
@@ -60,7 +68,10 @@
   font-size: 4em;
   display: in-line;
   font-family: fantasy;
-  color: rgba(24, 2, 65, 0.936);
+  background-image: linear-gradient(to bottom left,#4506f1e7, #717e7d);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 
 
 

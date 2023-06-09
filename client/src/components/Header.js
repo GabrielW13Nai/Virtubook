@@ -7,7 +7,7 @@ import '../App.css'
 function Header(){
 return(
     <>
-
+    <div className="bookoptions">
     <Link to='/borrowstatus'><button className= "Btn-book">Borrow book</button></Link>
     <Link to='/bookdisplay'><button className= "Btn-book">Display current library</button></Link>
     <Link to='/bookremove'><button className= "Btn-book">Remove book from catalogue</button></Link>
@@ -16,8 +16,7 @@ return(
     <Link to='/bookadd'>
         <button className="Btn-book">Add new book to catalogue</button>
         </Link>
-
-
+     </div>
     {/* <BookAdd />
     <ListOfBooks /> */}
     </>
