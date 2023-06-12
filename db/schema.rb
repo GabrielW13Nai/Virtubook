@@ -16,6 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_25_162549) do
     t.string "author"
     t.string "publisher"
     t.integer "year_published"
+    t.string "category"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

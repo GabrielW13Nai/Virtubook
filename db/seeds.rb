@@ -24,7 +24,13 @@ puts"seeding......."
     )}
 
 
-    60.times {Book.create({title: Faker::Book.title,author: Faker::Book.author,publisher:Faker::Book.publisher,year_published:rand(1895..2002)}, category:['Action', 'Science-Fiction', 'Fantasy', 'Animation', 'Drama'].sample)}
+    60.times {Book.create(title: Faker::Book.title,
+      author: Faker::Book.author,
+      publisher: Faker::Book.publisher,
+      year_published: rand(1895..2002),
+      category: ['Action', 'Science-Fiction', 'Fantasy', 'Animation', 'Drama'].sample,
+      image_url:[ 'https://images.pexels.com/photos/821139/pexels-photo-821139.jpeg',
+      'https://media.istockphoto.com/id/1411029939/photo/top-view-on-colorful-stacked-books-education-and-learning-concept-background.jpg?s=1024x1024&w=is&k=20&c=_CWMq9RS-uzK0oAGpHDA_4BSez_JlA2IYG3zPGZmX4w=', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjwR_qwwP-PgM2uGa5crh8YvIhpV_yc7LNXA&usqp=CAU','https://media.istockphoto.com/id/1335708681/photo/stacks-of-books-for-teaching-knowledge-college-library-green-background.jpg?s=612x612&w=0&k=20&c=xsqB09d-hvAbJrnVASDyEd27fn11jSxpgRBDy-eaET0=', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LvNkVQQSXAnkienwI9Ox-B3aGsLqNrmnJw&usqp=CAU','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRihHs27RhbEozWAS9KzYQI-g_0vcjJh0WGlw&usqp=CAU', 'https://images.pexels.com/photos/4039747/pexels-photo-4039747.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load' ].sample)}
 
     100.times do
       book = Book.order('RANDOM()').first

@@ -1,24 +1,53 @@
 import React from 'react';
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import BookRemove from './BookRemove';
 
 function ListOfBooks(){
     const [books, setBooks] = useState([])
 
+
     useEffect(()=>{
     fetch('/books')
     .then(res => res.json())
-    .then(setBooks);
+    .then(book=>{
+        setBooks(book)});
     }, [])
 
 
     return (
     <>
-    <h1>List of books to borrow</h1>
+    <Link to="/"><button className="Btn-book">Back to Dashboard</button></Link>
+    <h1>Here are some books to choose from:</h1>
     {books.map(book => (
-    <div>
-    <ul>{book.title}</ul>
-    </div>))}
+        <>
+    <section className='book-details'>
+        <div className='bookimage'>
+            <section className='image'>
+                <img
+                    src={book.image_url}
+                    alt='Not  found'
+                    width="400"
+                    height="450"
+                />
+            </section>
+        </div>
+        <div className='book-textstyle'>
+         <label>Title: {book.title} </label> <br/>
+         <label>Author: {book.author}</label> <br/>
+         <label>Publisher:{book.publisher} </label> <br/>
+         <label>Year Published: {book.year_published} </label> <br/>
+         <label>Category: {book.category} </label>
+        </div>
+        <div>
+        </div>
+        <BookRemove bookremove={books} setBookRemove={setBooks} book={book} />
+    </section>
+    </>
+    ))}
+
+
     </>
     )
 

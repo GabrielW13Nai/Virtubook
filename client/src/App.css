@@ -1,5 +1,11 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+
+
 }
 
 .App-logo {
@@ -41,7 +47,7 @@
   padding: 5px;
   background-color: rgba(3, 86, 86, 0.245);
   color: rgb(17, 6, 6);
-  width: 250px;
+  width: 480px;
   height: 35px;
   font-family: fantasy;
   font-size: large;
@@ -56,8 +62,9 @@
   border: 1px solid ;
   border-radius: 5px;
   padding: 10px;
-  display:block;
-  margin-right: 46.5em;
+  display:inline-block;
+  width: 500px;
+  /* margin-right: 46.5em; */
 }
 
 .Btn-book:hover{
@@ -68,11 +75,81 @@
   font-size: 4em;
   display: in-line;
   font-family: fantasy;
-  background-image: linear-gradient(to bottom left,#4506f1e7, #717e7d);
+  background-image: linear-gradient(to bottom left,#060308e7, #15f2e0);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 
-
-
 }
+
+#addbook{
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 14px;
+  text-align: left;
+}
+
+.textbox-text {
+  width: 300px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 4px rgba(194, 192, 192, 0.96);
+  font-size: 14px;
+  }
+
+  /* .title{
+    font-size: 1em;
+    display: in-line;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(to bottom left,#390bb9e7, #0cf0dd);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: left;
+    margin-left: 200px ; */
+/*
+
+  } */
+
+  .book-details{
+    display:inline-block;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    min-height: 500px;
+    min-width: 350px;
+    vertical-align: bottom;
+    margin: 10px;
+
+  }
+
+  .dashboard{
+    font-family: cursive;
+    font-size: 32px;
+  }
+
+  .book-textstyle{
+    text-align: left;
+    line-height: 2em;
+    font-family: cursive;
+  }
+
+.bookimage{
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 4px rgba(194, 192, 192, 0.96);
+}
+
+.remove-button{
+  min-height: 30px;
+  min-width: 30px;
+  font-family: cursive;
+}
+
+
