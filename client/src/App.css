@@ -43,9 +43,17 @@
   }
 }
 
+.page-container{
+  border: transparent;
+  padding: 20px;
+  background-color: rgb(252, 249, 249);
+
+
+}
+
 .Btn-book {
   padding: 5px;
-  background-color: rgba(3, 86, 86, 0.245);
+  background-color: rgba(110, 111, 111, 0.245);
   color: rgb(17, 6, 6);
   width: 480px;
   height: 35px;
@@ -59,30 +67,33 @@
 }
 
 .bookoptions{
-  border: 1px solid ;
   border-radius: 5px;
   padding: 10px;
-  display:inline-block;
+  display:inline-flexbox;
   width: 500px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px 5px rgba(194, 192, 192, 0.96);
+  border-radius: 25px;
+  min-height: 75vh;
   /* margin-right: 46.5em; */
 }
 
 .Btn-book:hover{
-  background-color:rgba(61, 6, 164, 0.936);
+  background-color:rgba(164, 6, 56, 0.936);
 }
 
 .shade{
   font-size: 4em;
   display: in-line;
   font-family: fantasy;
-  background-image: linear-gradient(to bottom left,#060308e7, #15f2e0);
+  background-image: linear-gradient(to bottom left,#060308e7, #f21515);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 
 }
 
-#addbook{
+.addbook{
   border: 1px solid;
   border-radius: 10px;
   display: inline-block;
@@ -118,7 +129,6 @@
   } */
 
   .book-details{
-    display:inline-block;
     padding: 10px;
     border: 0;
     border-radius: 5px;
@@ -126,12 +136,19 @@
     min-width: 350px;
     vertical-align: bottom;
     margin: 10px;
-
+    display: inline-block;
   }
 
-  .dashboard{
+  /* .routes-ctn{
+
+
+
+  } */
+
+  .dashboard-title{
     font-family: cursive;
     font-size: 32px;
+    margin-right: 75px;
   }
 
   .book-textstyle{
@@ -152,4 +169,20 @@
   font-family: cursive;
 }
 
-
+.Btn-books {
+  padding: 5px;
+  background-color: rgba(110, 111, 111, 0.245);
+  color: rgb(17, 6, 6);
+  width: 400px;
+  height: 35px;
+  font-family: fantasy;
+  font-size: large;
+  margin-top: 0.5em;
+  display:grid;
+  border: none;
+  border-radius: 15px;
+  text-decoration-line: none;
+}
+.Btn-books:hover{
+  background-color:rgba(164, 6, 56, 0.936);
+}

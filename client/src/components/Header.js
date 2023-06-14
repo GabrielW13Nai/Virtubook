@@ -9,13 +9,13 @@ return(
     <>
 
     <div className="bookoptions">
-     <h2 className="dashboard">Dashboard</h2>
-     <Link to='/borrowstatus'><button className= "Btn-book">Issue book to borrower</button></Link>
-     <Link to='/books'><button className= "Btn-book">Display current library</button></Link>
-     <Link to='/borrowstatus'><button className= "Btn-book">View status of borrowed books</button></Link>
-     <Link to='/seeborrowed'><button className= "Btn-book">See borrowed books here &rarr;</button></Link>
+     <h2 className="dashboard-title">Dashboard</h2>
+     <Link to='/borrowstatus'><button className= "Btn-books">Issue book to borrower</button></Link><br></br>
+     <Link to='/books'><button className= "Btn-books">Display current library</button></Link><br></br>
+     <Link to='/borrowstatus'><button className= "Btn-books">View status of borrowed books</button></Link><br></br>
+     <Link to='/seeborrowed'><button className= "Btn-books">See borrowed books here &rarr;</button></Link><br></br>
      <Link to='/addbook'>
-        <button className="Btn-book">Add new book to catalogue</button>
+        <button className="Btn-books">Add new book to catalogue</button>
     </Link>
 
      </div>

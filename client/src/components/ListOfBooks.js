@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import BookRemove from './BookRemove';
+// import Search from './Search';
 
 function ListOfBooks(){
     const [books, setBooks] = useState([])
@@ -19,6 +20,9 @@ function ListOfBooks(){
     return (
     <>
     <Link to="/"><button className="Btn-book">Back to Dashboard</button></Link>
+    {/* <div>
+        <Search books={books}/>
+    </div> */}
     <h1>Here are some books to choose from:</h1>
     {books.map(book => (
         <>
