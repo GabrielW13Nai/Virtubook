@@ -32,7 +32,7 @@ function ListOfBooks(){
             className="textbox-text"
             type="text"
             placeholder="Search for book with keywords..."
-            onChange={e=> setFilter (e.target.value) }
+            onChange={e=> setFilter(e.target.value) }
             />
         </div>
     </div>
